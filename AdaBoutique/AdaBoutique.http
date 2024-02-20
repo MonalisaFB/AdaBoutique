@@ -1,0 +1,6 @@
+@AdaBoutique_HostAddress = http://localhost:5291
+
+GET {{AdaBoutique_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
