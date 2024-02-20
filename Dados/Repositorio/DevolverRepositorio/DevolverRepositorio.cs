@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dados.Repositorio.DevolucaoRepositorio
+namespace Dados.Repositorio.DevolverRepositorio
 {
-    internal interface IDevolucaoRepositorio
+    internal class DevolverRepositorio
     {
     }
 }
