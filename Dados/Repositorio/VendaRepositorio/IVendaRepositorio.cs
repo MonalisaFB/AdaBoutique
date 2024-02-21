@@ -9,6 +9,8 @@ namespace Dados.Repositorio.VendaRepositorio
 {
     public interface IVendaRepositorio
     {
-        Venda VendaRoupa(Venda venda);
+        Venda RegistrarVenda(Venda venda);
+        List<Venda> ListarVendas();
+        Venda? BuscarNfe(int nfe);
     }
 }

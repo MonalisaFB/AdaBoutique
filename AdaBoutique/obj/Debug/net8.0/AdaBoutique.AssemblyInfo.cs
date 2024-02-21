@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AdaBoutique")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+662519e040f8380178d258f7b0a624bc34e75752")]
 [assembly: System.Reflection.AssemblyProductAttribute("AdaBoutique")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AdaBoutique")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

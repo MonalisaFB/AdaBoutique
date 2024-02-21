@@ -9,6 +9,7 @@ namespace Dados.Repositorio.TrocaRepositorio
 {
     public interface ITrocaRepositorio
     {
-        Troca TrocarRoupas(Troca troca);
+        Troca RegistrarTroca(Troca troca);
+        List<Troca> ListarTroca();
     }
 }

@@ -9,6 +9,7 @@ namespace Dados.Repositorio.DevolverRepositorio
 {
     public interface IDevolverRepositorio
     {
-        Devolver DevolverRoupas(Devolver devolver);
+        Devolver RegistarDevolucao(Devolver devolver);
+        List<Devolver> ListarDevolucao();
     }
 }
