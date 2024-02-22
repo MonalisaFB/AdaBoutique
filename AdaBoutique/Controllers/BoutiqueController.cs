@@ -46,9 +46,9 @@ namespace AdaBoutique.Controllers
 
         public IActionResult ListarVendas()
         {
-            _logger.LogInformation("Get inicializado");
+            _logger.LogInformation($"{nameof(ListarVendas)} inicializado");
             var vendas = _vendaRepositorio.ListarVendas();
-            _logger.LogInformation("Get finalizado");
+            _logger.LogInformation($"{nameof(ListarVendas)} finalizado");
             return Ok(vendas);
         }
 
@@ -56,9 +56,9 @@ namespace AdaBoutique.Controllers
         [HttpPost("registrardevolucao")]
         public IActionResult RegistrarDevolucao([FromBody] Devolver devolver)
         {
-            _logger.LogInformation("PostBody inicializado");
+            _logger.LogInformation($"{nameof(RegistrarDevolucao)} inicializado");
             var registrarDevolucao = _devolverRepositorio.RegistarDevolucao(devolver);
-            _logger.LogInformation("PostBody finalizado");
+            _logger.LogInformation($"{nameof(RegistrarDevolucao)} finalizado");
 
             return Ok(registrarDevolucao);
         }
@@ -66,9 +66,9 @@ namespace AdaBoutique.Controllers
         [HttpGet("listarevolucao")]
         public IActionResult ListarDevolucao()
         {
-            _logger.LogInformation("Get inicializado");
+            _logger.LogInformation($"{nameof(ListarDevolucao)} inicializado");
             var devolucoes = _devolverRepositorio.ListarDevolucao();
-            _logger.LogInformation("Get finalizado");
+            _logger.LogInformation($"{nameof(ListarDevolucao)} finalizado");
 
             return Ok(devolucoes);
         }
@@ -76,9 +76,9 @@ namespace AdaBoutique.Controllers
         [HttpPost("registrartroca")]
         public IActionResult RegistrarTroca([FromBody] Troca troca)
         {
-            _logger.LogInformation("PostBody inicializado");
+            _logger.LogInformation($"{nameof(RegistrarTroca)} inicializado");
             var registrarTroca = _trocaRepositorio.RegistrarTroca(troca);
-            _logger.LogInformation("PostBody finalizado");
+            _logger.LogInformation($"{nameof(RegistrarTroca)} finalizado");
 
             return Ok(registrarTroca);
         }
@@ -86,9 +86,9 @@ namespace AdaBoutique.Controllers
         [HttpGet("listartroca")]
         public IActionResult ListarTroca()
         {
-            _logger.LogInformation("Get inicializado");
+            _logger.LogInformation($"{nameof(ListarTroca)} inicializado");
             var trocas = _trocaRepositorio.ListarTroca();
-            _logger.LogInformation("Get finalizado");
+            _logger.LogInformation($"{nameof(ListarTroca)} finalizado");
             return Ok(trocas);
         }
 
