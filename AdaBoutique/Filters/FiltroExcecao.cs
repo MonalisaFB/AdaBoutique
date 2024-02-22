@@ -7,6 +7,11 @@ namespace AdaBoutique.Filters
 {
     public class FiltroExcecao : IExceptionFilter
     {
+        private readonly ILogger<FiltroExcecao> _logger;
+        public FiltroExcecao(ILogger<FiltroExcecao> logger)
+        {
+            _logger = logger;
+        }
         public void OnException(ExceptionContext context)
         {
             if(context.Exception is BoutiqueApiException boutiqueApiException)
@@ -37,6 +42,8 @@ namespace AdaBoutique.Filters
                 };
 
             }
+
+            _logger.LogError(context.Exception, "Filtro de exceção foi ativado!");
         }
     }
 }
