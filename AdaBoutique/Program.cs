@@ -14,10 +14,8 @@ namespace AdaBoutique
 
             // Add services to the container.
 
-            builder.Services.AddControllers(options =>
-            {
-                options.Filters.Add<FiltroExcecao>();
-            });
+            builder.Services.AddControllers();
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
@@ -38,6 +36,11 @@ namespace AdaBoutique
             }
 
             app.UseAuthorization();
+
+            app.UseCors(policyBuilder =>
+            {
+                policyBuilder.WithOrigins("http://localhost:5500");
+            });
 
 
             app.MapControllers();

@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace AdaBoutique.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    //[Route("[controller]")]
     public class BoutiqueController : ControllerBase
     {
         private readonly IVendaRepositorio _vendaRepositorio;
@@ -27,14 +27,14 @@ namespace AdaBoutique.Controllers
         }
 
 
-        [HttpPost]
+        [HttpPost("registarvenda")]
         public IActionResult RegistrarVenda([FromBody] Venda venda)
         {
             var registrarVenda = _vendaRepositorio.RegistrarVenda(venda);
             return Ok(registrarVenda);
         }
 
-        [HttpGet]
+        [HttpGet("listarvenda")]
 
         public IActionResult ListarVendas()
         {
@@ -43,32 +43,32 @@ namespace AdaBoutique.Controllers
         }
 
 
-        /*[HttpPost]
+        [HttpPost("registrardevolucao")]
         public IActionResult RegistrarDevolucao([FromBody] Devolver devolver)
         {
             var registrarDevolucao = _devolverRepositorio.RegistarDevolucao(devolver);
             return Ok(registrarDevolucao);
         }
-        [HttpGet]
+        [HttpGet("listarevolucao")]
         public IActionResult ListarDevolucao()
         {
             var devolucoes = _devolverRepositorio.ListarDevolucao();
             return Ok(devolucoes);
         }
 
-        [HttpPost]
+        [HttpPost("registrartroca")]
         public IActionResult RegistrarTroca([FromBody] Troca troca)
         {
             var registrarTroca = _trocaRepositorio.RegistrarTroca(troca);
             return Ok(registrarTroca);
         }
 
-        [HttpGet]
+        [HttpGet("listartroca")]
         public IActionResult ListarTroca()
         {
             var trocas = _trocaRepositorio.ListarTroca();
             return Ok(trocas);
-        }*/
+        }
 
     }
 }

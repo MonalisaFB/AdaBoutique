@@ -15,7 +15,7 @@ namespace Dados.Repositorio.VendaRepositorio
         public Venda? BuscarNfe(int nfe)
         {
             var vendaNfe = _vendas.FirstOrDefault(x => x.NumeroNFe == nfe);
-            if (vendaNfe != null)
+            if (vendaNfe == null)
             {
                 throw new BoutiqueApiException($"A Nota Fiscal de número {nfe} não foi encontrada!", 404);
             }
